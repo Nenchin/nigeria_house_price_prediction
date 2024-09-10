@@ -84,12 +84,12 @@ xgb_clf = jb.load("model.pkl")
 if c1.button("Predict Input Data"):
     input_transf = scaler.transform(input_df)
     prediction = np.exp(xgb_clf.predict(input_transf))
-    c2.write(prediction)
+    #c2.write(prediction)
     
 
     
-    c1.write(" # Predicted result")
-    c1.write(pd.concat([input_df, pd.DataFrame(prediction,
-                          columns=["result"],
+    c2.write(" # Predicted result")
+    c2.write(pd.concat([input_df, pd.DataFrame(prediction,
+                          columns=["result (Million)"],
                           index=[0])], axis=1))
     c1.write("---")
