@@ -76,8 +76,8 @@ def input_features():
 
 input_df = input_features()
 
-scaler = jb.load(r"C:\Users\Nenchi\Documents\Python_Scripts\houseprice9ja\scaler1.pkl")
-xgb_clf = jb.load(r"C:\Users\Nenchi\Documents\Python_Scripts\houseprice9ja\model.pkl")
+scaler = jb.load("scaler1.pkl")
+xgb_clf = jb.load("model.pkl")
 
 #c2.image('unnamed-1.jpg')
 
