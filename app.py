@@ -84,7 +84,7 @@ xgb_clf = jb.load("model.pkl")
 if c1.button("Predict Input Data"):
     input_transf = scaler.transform(input_df)
     prediction = np.exp(xgb_clf.predict(input_transf))
-    c2.write(f"Price (Million) prediction")
+    c2.write(f"Price (Million) {prediction}")
     
 
     
